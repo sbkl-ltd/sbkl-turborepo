@@ -18,6 +18,7 @@
     "@sbkl-turborepo/schemas": "*",
     "@sbkl-turborepo/ui": "*",
     "@tanstack/react-query": "^5.90.20",
+    "@vercel/config": "^0.0.28",
     "@workos-inc/authkit-nextjs": "^2.13.0",
     "@workos-inc/node": "^8.0.0",
     "convex": "^1.31.7",
