@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/styles/globals.css",
+    "baseColor": "zinc",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@sbkl-turborepo/ui/components",
+    "providers": "@sbkl-turborepo/ui/providers",
+    "utils": "@sbkl-turborepo/ui/lib/utils",
+    "hooks": "@sbkl-turborepo/ui/hooks",
+    "lib": "@sbkl-turborepo/ui/lib",
+    "ui": "@sbkl-turborepo/ui/components"
+  }
+}

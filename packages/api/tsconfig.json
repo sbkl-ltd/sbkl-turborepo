@@ -1,0 +1,11 @@
+{
+  "extends": "@sbkl-turborepo/typescript/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@sbkl-turborepo/schemas/*": ["../schemas/src/*"],
+      "@sbkl-turborepo/typescript/*": ["../typescript/*"]
+    }
+  },
+  "include": ["convex/**/*", "src/**/*"]
+}

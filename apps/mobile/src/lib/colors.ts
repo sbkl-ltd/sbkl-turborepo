@@ -1,0 +1,87 @@
+export const lightTextColors = {
+  "text-foreground": "#09090B",
+  "text-primary-foreground": "#FAFAFA",
+  "text-secondary-foreground": "#F4F4F5",
+  "text-muted-foreground": "#A1A1AA",
+  "text-accent-foreground": "#F4F4F5",
+  "text-destructive-foreground": "#FEF2F2",
+  "text-muted": "#F4F4F5",
+};
+
+export const darkTextColors = {
+  "text-foreground": "#FAFAFA",
+  "text-primary-foreground": "#18181B",
+  "text-secondary-foreground": "#3F3F46",
+  "text-muted-foreground": "#71717A",
+  "text-accent-foreground": "#18181B",
+  "text-destructive-foreground": "#FAFAFA",
+  "text-muted": "#27272A",
+};
+
+export function getTextColor(
+  key: keyof typeof lightTextColors,
+  colorScheme?: "light" | "dark" | null | undefined
+) {
+  return colorScheme === "dark" ? darkTextColors[key] : lightTextColors[key];
+}
+
+export const colors = {
+  light: {
+    background: "#FFFFFF",
+    foreground: "#09090B",
+    card: "#FFFFFF",
+    "card-foreground": "#09090B",
+    popover: "#FFFFFF",
+    "popover-foreground": "#09090B",
+    primary: "#18181B",
+    "primary-foreground": "#FAFAFA",
+    secondary: "#F4F4F5",
+    "secondary-foreground": "#18181B",
+    muted: "#F4F4F5",
+    "muted-foreground": "#71717A",
+    accent: "#F4F4F5",
+    "accent-foreground": "#18181B",
+    destructive: "#E21D48",
+    "destructive-foreground": "#FAFAFA",
+    border: "#E4E4E7",
+    input: "#E4E4E7",
+    ring: "#A1A1AA",
+    "sidebar-background": "#FAFAFA",
+    "sidebar-foreground": "#3F3F46",
+    "sidebar-primary": "#18181B",
+    "sidebar-primary-foreground": "#FAFAFA",
+    "sidebar-accent": "#F4F4F5",
+    "sidebar-accent-foreground": "#18181B",
+    "sidebar-border": "#E5E7EB",
+    "sidebar-ring": "#3B82F6",
+  },
+  dark: {
+    background: "#09090B",
+    foreground: "#FAFAFA",
+    card: "#09090B",
+    "card-foreground": "#FAFAFA",
+    popover: "#09090B",
+    "popover-foreground": "#FAFAFA",
+    primary: "#FAFAFA",
+    "primary-foreground": "#18181B",
+    secondary: "#27272A",
+    "secondary-foreground": "#FAFAFA",
+    muted: "#27272A",
+    "muted-foreground": "#A1A1AA",
+    accent: "#27272A",
+    "accent-foreground": "#FAFAFA",
+    destructive: "#E21D48",
+    "destructive-foreground": "#FEF2F2",
+    border: "#27272A",
+    input: "#27272A",
+    ring: "#D4D4D8",
+    "sidebar-background": "#18181B",
+    "sidebar-foreground": "#F4F4F5",
+    "sidebar-primary": "#1D4ED8",
+    "sidebar-primary-foreground": "#FFFFFF",
+    "sidebar-accent": "#27272A",
+    "sidebar-accent-foreground": "#F4F4F5",
+    "sidebar-border": "#27272A",
+    "sidebar-ring": "#3B82F6",
+  },
+};

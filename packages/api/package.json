@@ -1,0 +1,40 @@
+{
+  "name": "@sbkl-turborepo/api",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./convex/_generated/api.d.ts",
+      "default": "./convex/_generated/api.js"
+    },
+    "./dataModel": {
+      "types": "./convex/_generated/dataModel.d.ts"
+    },
+    "./server": {
+      "types": "./convex/_generated/server.d.ts",
+      "default": "./convex/_generated/server.js"
+    }
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "bunx convex dev",
+    "deploy": "bunx convex deploy",
+    "lint": "biome lint . --config-path ../biome/biome.json",
+    "format": "biome format --write . --config-path ../biome/biome.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@convex-dev/workos-authkit": "^0.1.5",
+    "@sbkl-turborepo/schemas": "*",
+    "convex": "latest",
+    "convex-helpers": "^0.1.111",
+    "hono": "^4.11.7",
+    "strip-ansi": "^7.1.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@sbkl-turborepo/typescript": "*",
+    "@sbkl-turborepo/biome": "*",
+    "typescript": "^5"
+  }
+}

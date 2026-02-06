@@ -1,0 +1,6 @@
+@import "@sbkl-turborepo/ui/globals.css";
+
+@config "../../tailwind.config.ts";
+
+@source "../components/**/*.tsx";
+@source "../app/**/*.tsx";

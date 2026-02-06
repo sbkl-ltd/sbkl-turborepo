@@ -1,0 +1,11 @@
+{
+  "name": "@sbkl-turborepo/typescript",
+  "version": "0.0.1",
+  "main": "tsconfig/base.json",
+  "files": [
+    "tsconfig"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

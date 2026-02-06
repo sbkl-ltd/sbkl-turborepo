@@ -1,0 +1,4 @@
+{
+  "envPath": "../../.env",
+  "functions": "../../packages/api/convex/"
+}

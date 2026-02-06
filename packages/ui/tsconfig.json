@@ -1,0 +1,15 @@
+{
+  "extends": "@sbkl-turborepo/typescript/tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@sbkl-turborepo/ui/*": ["./src/*"],
+      "@sbkl-turborepo/api/*": ["../api/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist", "eslint.config.js"]
+}
