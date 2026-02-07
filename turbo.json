@@ -1,7 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": [
-    "CONVEX_DEPLOY_KEY",
+    "CONVEX_DEPLOYMENT",
+    "CONVEX_URL",
     "WORKOS_API_KEY",
     "WORKOS_CLIENT_ID",
     "WORKOS_COOKIE_PASSWORD",
