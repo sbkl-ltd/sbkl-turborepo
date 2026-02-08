@@ -5,6 +5,7 @@
       "name": "seekflow",
       "devDependencies": {
         "@biomejs/biome": "^1.9.0",
+        "@vercel/config": "^0.0.28",
         "turbo": "^2.0.0",
       },
     },
