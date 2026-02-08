@@ -2,6 +2,7 @@
   "name": "@sbkl-turborepo/mobile",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "setup": "bun run prebuild:ios && bun run ios",
     "android": "expo run:android",
