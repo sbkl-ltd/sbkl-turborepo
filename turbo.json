@@ -13,7 +13,21 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": ["dist/**"]
+    },
+    "web#build": {
+      "dependsOn": ["^build"],
+      "env": [
+        "CONVEX_DEPLOYMENT",
+        "CONVEX_URL",
+        "WORKOS_API_KEY",
+        "WORKOS_CLIENT_ID",
+        "WORKOS_COOKIE_PASSWORD",
+        "NEXT_PUBLIC_CONVEX_URL",
+        "NEXT_PUBLIC_SITE_URL",
+        "NEXT_PUBLIC_WORKOS_REDIRECT_URI"
+      ],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "clean": {
       "cache": false
