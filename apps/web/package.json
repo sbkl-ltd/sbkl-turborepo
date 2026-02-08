@@ -4,14 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run with-env next build",
+    "build": "next build",
     "clean": "git clean -xdf .cache .next .turbo node_modules",
-    "dev": "bun run with-env next dev",
+    "dev": "bun with-env next dev",
     "format": "biome format --write . --config-path ../packages/biome/biome.json",
     "lint": "biome lint . --config-path ../packages/biome/biome.json",
     "start": "bun run with-env next start",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "with-env": "dotenv -e ../../.env.local --"
   },
   "dependencies": {
     "@convex-dev/react-query": "^0.1.0",
@@ -34,6 +34,7 @@
   "devDependencies": {
     "@sbkl-turborepo/biome": "*",
     "@sbkl-turborepo/typescript": "*",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -98,6 +98,7 @@
       "devDependencies": {
         "@sbkl-turborepo/biome": "*",
         "@sbkl-turborepo/typescript": "*",
+        "@tailwindcss/postcss": "^4.1.18",
         "@types/node": "^20",
         "@types/react": "^19",
         "@types/react-dom": "^19",
