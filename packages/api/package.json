@@ -2,6 +2,7 @@
   "name": "@sbkl-turborepo/api",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "exports": {
     ".": {
       "types": "./convex/_generated/api.d.ts",
