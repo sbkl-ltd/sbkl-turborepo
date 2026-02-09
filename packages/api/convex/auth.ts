@@ -22,6 +22,7 @@ export const { authKitAction } = authKit.actions({
 
 export const { authKitEvent } = authKit.events({
   "user.created": async (ctx, event) => {
+    console.log("user.created", event);
     await ctx.db.insert("users", {
       authId: event.data.id,
       email: event.data.email,
