@@ -8,15 +8,17 @@
     "./types/*": "./src/types/*.ts"
   },
   "scripts": {
-    "clean": "git clean -xdf node_modules",
+    "clean": "git clean -xdf node_modules .turbo",
     "lint": "biome lint . --config-path ../biome/biome.json",
     "format": "biome format --write . --config-path ../biome/biome.json",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "convex-helpers": "^0.1.112",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@sbkl-turborepo/typescript": "*",
     "@sbkl-turborepo/biome": "*",
     "typescript": "^5"
   }

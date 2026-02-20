@@ -1,6 +1,5 @@
-import { Loader2Icon } from "lucide-react";
-
 import { cn } from "@sbkl-turborepo/ui/lib/utils";
+import { Loader2Icon } from "lucide-react";
 
 function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
   return (

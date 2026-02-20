@@ -62,14 +62,29 @@ export default async function SignInPage({ searchParams }: SignInPageProps) {
             <CardTitle className="text-center text-xl">Sign in</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Button variant="outline" size="lg" className="w-full" asChild>
-              <a href={googleOAuthUrl}>
-                <GoogleIcon className="h-5 w-5 mr-2" />
-                Sign in with Google
-              </a>
-            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full"
+              render={() => (
+                <a href={googleOAuthUrl}>
+                  <GoogleIcon className="h-5 w-5 mr-2" />
+                  Sign in with Google
+                </a>
+              )}
+            />
 
-            <Button variant="outline" size="lg" className="w-full" asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full"
+              render={() => (
+                <a href={githubOAuthUrl}>
+                  <GithubIcon className="h-5 w-5 mr-2" />
+                  Sign in with GitHub
+                </a>
+              )}
+            >
               <a href={githubOAuthUrl}>
                 <GithubIcon className="h-5 w-5 mr-2" />
                 Sign in with GitHub

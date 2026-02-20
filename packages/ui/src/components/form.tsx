@@ -159,7 +159,7 @@ function SplitTextField({
   const [LeftIcon, RightIcon] = icons ?? [null, null];
 
   const [leftValue = "", rightValue = ""] = (field.state.value ?? "").split(
-    "-"
+    "-",
   );
 
   function handleChange(value: string, side: "left" | "right") {
@@ -196,14 +196,14 @@ function SplitTextField({
             {
               "shrink-0": size.kind === "width" && size.values[0] !== null,
             },
-            inputGroupClassName
+            inputGroupClassName,
           )}
           style={
             size.kind === "flex"
               ? { flex: size.values[0] }
               : size.kind === "width"
-              ? { width: size.values[0] ? size.values[0] : undefined }
-              : undefined
+                ? { width: size.values[0] ? size.values[0] : undefined }
+                : undefined
           }
         >
           <InputGroupInput
@@ -226,14 +226,14 @@ function SplitTextField({
             {
               "shrink-0": size.kind === "width" && size.values[1] !== null,
             },
-            inputGroupClassName
+            inputGroupClassName,
           )}
           style={
             size.kind === "flex"
               ? { flex: size.values[1] }
               : size.kind === "width"
-              ? { width: size.values[1] ? `${size.values[1]}` : undefined }
-              : undefined
+                ? { width: size.values[1] ? `${size.values[1]}` : undefined }
+                : undefined
           }
         >
           <InputGroupInput
@@ -350,8 +350,10 @@ export function TextareaField({
   );
 }
 
-interface SelectFieldProps
-  extends Omit<React.ComponentProps<typeof Select>, "value" | "onValueChange"> {
+interface SelectFieldProps extends Omit<
+  React.ComponentProps<typeof Select>,
+  "value" | "onValueChange"
+> {
   label?: string;
   placeholder?: string;
   description?: string;
@@ -377,7 +379,7 @@ export function SelectField({
       {label ? <FieldLabel htmlFor={field.name}>{label}</FieldLabel> : null}
       <Select
         value={field.state.value ?? ""}
-        onValueChange={field.handleChange}
+        onValueChange={(value) => field.handleChange(value as string)}
         {...props}
       >
         <SelectTrigger id={field.name} className={triggerClassName}>
@@ -410,10 +412,7 @@ export function CheckboxField({
           id={field.name}
           {...props}
           checked={field.state.value}
-          onCheckedChange={(state) => {
-            if (state === "indeterminate") return;
-            field.handleChange(state);
-          }}
+          onCheckedChange={field.handleChange}
         />
         <label
           htmlFor={field.name}
@@ -457,11 +456,7 @@ export function RadioField({
         value={field.state.value}
         onValueChange={field.handleChange}
       >
-        <ScrollArea
-          orientation="horizontal"
-          className="overflow-x-auto -ml-4 overflow-y-hidden -mt-2"
-          viewportClassName=" pt-2 pb-4 px-4"
-        >
+        <ScrollArea className="overflow-x-auto -ml-4 overflow-y-hidden -mt-2">
           <div className="flex gap-2">
             {options.map((option) => {
               return (
@@ -472,7 +467,7 @@ export function RadioField({
                     "border rounded-md relative w-[250px] transition-colors duration-300",
                     field.state.value === option.value
                       ? "ring-3 ring-domain/40 border-domain"
-                      : ""
+                      : "",
                   )}
                 >
                   <div className="flex flex-col gap-1 w-full h-full">
