@@ -1,5 +1,5 @@
 import { authkit, handleAuthkitHeaders } from "@workos-inc/authkit-nextjs";
-import { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 
 const unauthenticatedPaths = [
   "/",
@@ -20,11 +20,11 @@ function isPathAllowed(pathname: string, allowedPaths: string[]): boolean {
     // Handle wildcard patterns like /api/:path*
     if (path.includes(":path*")) {
       const basePath = path.replace("/:path*", "");
-      return pathname.startsWith(basePath + "/") || pathname === basePath;
+      return pathname.startsWith(`${basePath}/`) || pathname === basePath;
     }
 
     // Handle prefix matches
-    if (pathname.startsWith(path + "/")) {
+    if (pathname.startsWith(`${path}/`)) {
       return true;
     }
 
