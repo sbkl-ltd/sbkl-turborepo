@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 @plugin "@tailwindcss/typography";
 
 @source "../../node_modules/streamdown/dist/index.js";
@@ -139,9 +141,13 @@
 
 @keyframes shimmer {
   0% {
-    background-position: 100% center, 0% center;
+    background-position:
+      100% center,
+      0% center;
   }
   100% {
-    background-position: 0% center, 0% center;
+    background-position:
+      0% center,
+      0% center;
   }
 }
