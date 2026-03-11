@@ -19,6 +19,7 @@
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "dev": "bunx convex dev",
+    "dev:web": "bunx convex dev",
     "deploy": "bunx convex deploy",
     "lint": "biome lint . --config-path ../biome/biome.json",
     "format": "biome format --write . --config-path ../biome/biome.json",

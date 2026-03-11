@@ -7,6 +7,7 @@
     "build": "next build",
     "clean": "git clean -xdf .cache .next .turbo node_modules",
     "dev": "bun with-env next dev",
+    "dev:web": "bun with-env next dev",
     "format": "biome format --write . --config-path ../packages/biome/biome.json",
     "lint": "biome lint . --config-path ../packages/biome/biome.json",
     "start": "bun run with-env next start",

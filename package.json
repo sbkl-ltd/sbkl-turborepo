@@ -11,6 +11,7 @@
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo run clean",
     "dev": "turbo dev --ui tui",
+    "dev:web": "turbo dev:web --ui tui",
     "lint": "turbo run lint",
     "format": "turbo run format",
     "check": "turbo run check",

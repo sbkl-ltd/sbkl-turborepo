@@ -6,7 +6,7 @@
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/styles/globals.css",
-    "baseColor": "zinc",
+    "baseColor": "neutral",
     "cssVariables": true
   },
   "iconLibrary": "lucide",
@@ -17,5 +17,7 @@
     "hooks": "@sbkl-turborepo/ui/hooks",
     "lib": "@sbkl-turborepo/ui/lib",
     "ui": "@sbkl-turborepo/ui/components"
-  }
+  },
+  "menuColor": "default-translucent",
+  "menuAccent": "subtle"
 }
